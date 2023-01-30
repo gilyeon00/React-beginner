@@ -1,0 +1,77 @@
+<!-- Promise이용해서 성공/실패 시 액션설정 
+        2초마다 콘솔에 n+1이 찍히도록, 4이상이 되면 에러로그 발생
+        2초마다 박스 생성 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{border: 200px solid rgb(251, 195, 195); min-width: 700px}
+        .one{width: 600px; height:100px; border:1px solid red; margin: 10px;}
+    </style>
+</head>
+<body>
+    <div class='box'>
+
+    </div>
+    
+    <script>
+        const box=document.querySelector('.box');
+
+        const mkElement = () => {
+            let mkDiv = document.createElement('div');
+            mkDiv.setAttribute('class', 'one') // setAttribute은 새로 생성. 속성명, 속성이름 (getAttribute는 있는거 사용할 때)
+            box.append(mkDiv) // append: 대상 요소의 마지막 자식
+        }
+        mkElement()
+
+        const fnc = (n) => {
+            return new Promise((resolve, reject) => {
+                //setTimeout(() => {resolve(11); }, 5000);     // 성공하면 매개변수로 11을 보내줌
+
+                setTimeout(() => {
+                    const value = n+1;
+                    if(value === 4) {
+                        console.log("4가 되었음")
+
+                        const err = new Error();
+                        err.name = "value값이 3이상입니다."
+                        reject(err)
+
+                        return 
+                    }
+                    console.log(value)
+
+                    resolve(value, mkElement())  // 성공 시, n+1을 보내줌
+                }, 2000)
+
+            })
+        }
+
+        fnc(0)
+        .then(n=> {
+            console.log('1: ', n)      
+            return fnc(n)
+        })
+        .then(n=> {
+            console.log('2: ', n)   
+            return fnc(n)
+        })
+        .then(n=> {
+            console.log('3: ', n)      
+            return fnc(n)
+        })
+        .catch((e)=> {
+            console.error(e);
+            console.log("실패")
+        })
+
+
+    </script>
+    
+</body>
+</html>
