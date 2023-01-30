@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{border: 200px solid rgb(251, 195, 195); min-width: 700px}
+        .one{width: 600px; height:100px; border:1px solid red; margin: 10px;}
+    </style>
+</head>
+<body>
+    <div class='box'></div>
+    <script>
+        const box = document.querySelector('.box');
+        const data = ['/data/comment.json', '/data/post.json', '/data/user.json']
+
+        // 요소 생성
+        const mkElement = (num) => {
+            let mkDiv = document.createElement('div')
+            mkDiv.setAttribute('class', 'one')
+            mkDiv.innerHTML=num;
+            box.append(mkDiv);
+        }
+
+        fetch(data[0])
+        .then(() => mkElement(111))
+        .then(() => {                                       // 파일이 불러진다면 숫자 보임
+            fetch(data[1]).then(() => {mkElement(222)})   // 콜백 함수 같음 -> async / await 사용
+        })
+        .catch(e => {
+            console.error(e)
+        })
+
+    </script>
+</body>
+</html>
