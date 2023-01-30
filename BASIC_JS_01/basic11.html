@@ -1,0 +1,111 @@
+<!-- youtube api를 이용해서 유튜브 만들어보기 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0; box-sizing: border-box}
+        ul,li{list-style: none;}
+        a{text-decoration: none; color:inherit;}
+        .container{width: 1200px; margin: auto;}
+        .video-list{display: flex; width: 100%; flex-wrap: wrap;}
+        .video-item{width:calc(20% - 10px); border:1px solid #ccc; margin: 4px; padding:12px;}
+        .video-item .thum-img img{width: 100%;}
+        .video-item .video-txt {word-wrap: break-word;}
+        .video-txt h2{font-size: 14px;}
+        .video-txt h3{font-size: 12px;}
+        .search-field{display: flex; justify-content: center;}
+        .search-box{display: flex; padding: 16px 0;}
+        #search{width: 600px; height: 30px; padding:0 8px;}
+        #searchBtn {width: 100px; background-color: black; color: #ffff; height: 30px;}
+
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <section class = "search-field">
+            <div class="search-box">
+                <input type="text" placeholder="원하는 비디오를 검색해보세요." id="search">
+                <button id="searchBtn">검색</button>
+            </div>
+        </section>
+        <section class = "video-list">
+            <div class="video-item">
+                <div class="thum-img">
+                    <img src="" alt="">
+                </div>
+                <div class="video-txt">
+                    <h2> 타이틀 </h2>
+                    <h3> 설명 </h3>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // const SECRET_LIST = '/secret.json'
+        // const API_KEY = SECRET_LIST.Google_id
+        const API_KEY = `AIzaSyApI60Cgpj5iVn8Y0bIFXZWQFI0qxtm9AA`
+        const videoListBox = document.querySelector('.video-list');
+        const searchInput = document.querySelector('#search');
+        const searchBtn = document.querySelector('#searchBtn');
+        let videoDataBox = [];
+
+        const getVideoList = async() => {
+            let url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=30&regionCode=kr&key=${API_KEY}`
+            let response = await fetch(url);
+            let videoData = await response.json();
+            //   받아오지도 않았는데 처리해버리면 오류나기때문에 순차적으로 진행되게끔한다 <- async / await사용
+            //console.log(videoData)
+            videoDataBox = videoData.items;
+            render();
+        }
+
+        const getSearchVideo = async() => {
+            let keyword = searchInput.value;
+            let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=${keyword}&regionCode=kr&type=video&key=${API_KEY}`
+            let response = await fetch(url);
+            let searchData = await response.json();
+            videoDataBox = searchData.items;
+            render();
+        }
+
+        // 화면에 그려줄 함수
+        const render = () => {
+            let videoResult = '';
+            videoResult = videoDataBox.map(item => {
+                return `
+                    <div class="video-item">
+                    <div class="thum-img">
+                        <img src=${item.snippet.thumbnails.medium.url} alt="">
+                    </div>
+                    <div class="video-txt">
+                        <h2>${item.snippet.title}</h2>
+                        <h3>${item.snippet.channelTitle}</h3>
+                    </div>
+                </div>`
+            }).join("")
+            // join("") : 배열을 공백으로 나눠줌 -> 유튜브 각 썸넬사이에 구분자가 쓰이는 문제 해결
+
+            videoListBox.innerHTML = videoResult;
+        }
+
+        getVideoList();
+        searchBtn.addEventListener('click', getSearchVideo)
+        searchInput.addEventListener('keydown', (event)=>{
+            // 이벤트리스너를 쓰면 이벤트 객체를 return함
+            if(event.keyCode === 13){
+                getSearchVideo();
+            }
+        })
+
+    </script>
+</body>
+</html>
+
+<!-- item을 수평으로 하고싶으면 예전에는 float, 지금은 flex
+    flex는 부모에게 줘야지 자식이 수평 적용됨 -->
