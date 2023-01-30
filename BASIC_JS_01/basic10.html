@@ -1,0 +1,51 @@
+<!-- async / await 사용 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{border: 200px solid rgb(251, 195, 195); min-width: 700px}
+        .one{width: 600px; height:100px; border:1px solid red; margin: 10px;}
+    </style>
+</head>
+<body>
+    <div class='box'></div>
+    <script>
+        const box = document.querySelector('.box');
+        const data = ['/data/comment.json', '/data/post.json', '/data/user.json']
+
+        // 요소 생성
+        const mkElement = (num) => {
+            let mkDiv = document.createElement('div')
+            mkDiv.setAttribute('class', 'one')
+            mkDiv.innerHTML=num;
+            box.append(mkDiv);
+        }
+        
+
+        // async() await사용 - 수평적, 비동기처리
+        // await는 진행중인 구문이 끝날때까지 기다리게 하는 구문
+        // 감싸는 함수에서 async를 붙임. async를 앞에 붙임으로써 비동기로 돌아가게 한다.
+
+        // 1. 함수로 만들어서 호출해서 사용하는 방법
+        const fnc = async() => {
+            await fetch(data[0]).then(()=>{ mkElement('1111')});
+            await fetch(data[1]).then(()=>{ mkElement('2222')});
+            await fetch(data[2]).then(()=>{ mkElement('3333')});
+        }
+        fnc();
+
+        // 2. 즉시실행하게 하는 방법
+        (async() => {
+            await fetch(data[0]).then(()=>{ mkElement('1111')});
+            await fetch(data[1]).then(()=>{ mkElement('2222')});
+            await fetch(data[2]).then(()=>{ mkElement('3333')});
+        }) ();
+    </script>
+</body>
+</html>
