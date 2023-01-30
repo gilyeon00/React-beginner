@@ -46,10 +46,10 @@
         </section>
     </div>
 
+    <script src="/BASIC_JS_01/secret.json"></script>
     <script>
-        // const SECRET_LIST = '/secret.json'
-        // const API_KEY = SECRET_LIST.Google_id
-        const API_KEY = ``
+        let secretList = JSON.parse(JSON.stringify(SecretFile));
+        let API_KEY = secretList.Google_id;
         const videoListBox = document.querySelector('.video-list');
         const searchInput = document.querySelector('#search');
         const searchBtn = document.querySelector('#searchBtn');
