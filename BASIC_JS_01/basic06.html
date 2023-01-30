@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fnc = () => {
+            return new Promise((resolve, reject) => {
+                //resolve();
+                reject()
+            })
+        }
+        // promise 생성자뒤에 then(), cetch() 만 올 수 있음
+        // fnc().then().then().then() ... 성공했을 때
+        // fnc().then().then().catch() 실패했을 때
+        
+        fnc()
+        .then(()=>{console.log("실행1")})
+        .then(()=>{console.log("실행2")})
+        .then(()=>{console.log("실행3")})
+        .catch((err)=> {
+            // 자동으로 error객체를 생성해줌 이름은 err가 아니라 다른걸로 선언해줘도됨
+            console.log("틀렸음!")
+        })
+
+    </script>
+    
+</body>
+</html>
