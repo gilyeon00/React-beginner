@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const num = [2001, 2002, 2003, 2004]
+
+        // forEach 1.
+        // num.forEach(item=>{
+        //     console.log(item)
+        // })
+
+        // forEach 2.
+        // num.forEach((item, index, arr)=>{
+        //     console.log(item)
+        //     console.log(arr)
+        //     console.log(index)
+        // })
+
+
+        // map
+        const data = [
+            {id: 1, name:'jung'},
+            {id: 2, name:'kim'},
+            {id: 3, name:'park'}
+        ]
+        data.map((item)=>console.log(item))
+        
+        const person = [
+            { 
+                name : "kim",
+                age : 21,
+                point : 50
+            },
+            { 
+                name : "lee",
+                age : 23,
+                point : 92
+            },            { 
+                name : "park",
+                age : 25,
+                point : 75
+            },            { 
+                name : "shin",
+                age : 29,
+                point : 81
+            }      
+        ]
+
+        person.map(item => console.log(item))
+        const pass = person.filter((item)=>{
+            // 새로운 array생성해서 return 
+            return item.age > 22;
+        })
+
+        console.log(pass)
+
+    </script>
+</body>
+</html>

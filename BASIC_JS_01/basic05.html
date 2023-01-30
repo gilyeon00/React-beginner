@@ -1,0 +1,38 @@
+<!-- 콜백 지옥 
+    ()=>{
+        ()=>{
+            ()=>{
+                
+            }
+        }
+    }
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fnc1 = (data) => {
+            const result3 = data * data;
+            return result3;
+        }
+        const fnc2 = (data, fnc) => {
+            const result2 = data / 2;
+            return result2;
+        }
+        const fnc3 = (dat, fnc) => {
+            const result1 = data * 5
+            return fnc(result1, fnc1)
+        }
+
+        let finalResult = fnc3(4, fnc2);
+        console.log(finalResult)
+    </script>
+</body>
+</html>
+

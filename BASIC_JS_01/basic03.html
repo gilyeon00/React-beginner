@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // a, b, c를 받아서 합을 return해주는 함수
+        function numAdd(a,b,c){
+            // arguments란 객체가 만들어짐. arguments는 내가 받은 매개변수를 저장해줌
+            console.log(arguments)  // 3
+            console.log('argument의 길이는 : ' , arguments.length)
+            console.log('argument의 Index 0의 값은 : ' , arguments[0])
+
+            return a+b+c ;
+        }
+        console.log(numAdd(10, 20, 30))
+
+
+        function numAdd2(a=0,b=0,c=0){
+            console.log(arguments)  
+            return a+b+c ;
+        }
+        console.log(numAdd2(10))    // a에만 10을 할당
+
+
+        // rest 파라미터(= 나머지 파라미터) : ...
+        // 만약 파라미터는 1개인데, 3개의 값을 받아온다면 오류발생
+        // 한 개는 무조건 받아올걸 아는데, 몇개가 들어올지 모를때 사용함
+        function numAdd3(...num){
+            console.log(num[0])  
+            console.log(num[1])  
+            console.log(num[2])  
+            
+            return num[0] + num[1] + num[2]
+        }
+        console.log(numAdd3(100, 200, 300)) 
+
+
+        function numSum(...num){
+            // for문
+            let sum = 0;
+            for(let i=0; i<num.length; i++){
+                sum += num[i]
+            }
+            return '총 합은 ' + sum
+        }
+        console.log(numSum(1000, 200, 30, 4))
+
+    </script>
+</body>
+</html>

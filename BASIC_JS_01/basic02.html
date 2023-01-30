@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 조건 ? true일때 : false일때
+        const value = 10 > 50 ? '참' : '거짓'
+        console.log(value) 
+
+        // 단항평가 - true고 false가 반환되는게 아니라 마지막끝나는 값 자체를 반환함
+        
+        // 논리합
+        console.log(true || false)  // true
+        console.log(30 || 50)       // 30
+        console.log(10 || 0)        // 10
+        console.log(false || true)  // true
+        console.log('' || 100)      // 100
+        console.log(false || false) // false (뒤에 false)
+        console.log(undefined || 0) // 0
+
+        // 논리곱
+        console.log(true && true)   // true (뒤에꺼)
+        console.log(true && false)  // false
+        console.log(300 && 500)     // 500
+        console.log(false && true)  // false
+        console.log(0 && 500)       // 0
+        console.log(false && false) // false (앞에꺼)
+        console.log(1 && null)      // null
+        console.log(undefined || 0) // undifined
+
+        // 부정연산자
+        console.log(!10)        // (!true) false 
+        console.log(!!10)       // true
+        console.log(!'hello')   // false
+        console.log(!!'hello')  // true
+
+        const msg1 = "안녕하세요";
+        const msg2 = "";
+        console.lod(msg1 || msg2)   // 안녕하세요
+
+
+    </script>
+</body>
+</html>
