@@ -1,0 +1,96 @@
+<!-- 비구조 할당 
+    배열을 꺼내쓰기 편하도록 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1,2,3,4,5];
+        const [arr1, arr2, arr3, arr4, arr5] = [1,2,3,4,5];
+        console.log(arr1);
+
+        const [num1, num2, num3=300] = [100, 200];
+        console.log(num1, num2, num3);      // 100 200 300
+        const [num4=400, num5, num6] = [500, 600];      
+        console.log(num4, num5, num6);      // 500 600 undefined
+
+        let price, item1, item2;
+        price = [item1, item2] = ['사과', '배', '키위', '귤']
+        console.log(item1)
+        console.log(item2)
+        console.log(price)      // ['사과', '배', '키위', '귤']
+
+        // men이라는 객체
+        const man = {
+            name: "철수",
+            address: 'seoul',
+            age : 30
+        }
+        const cat = {
+            name: "모모",
+            address: 'lasvegas',
+            age : 2
+        }
+
+        function print(obj) {
+            // console.log(obj.name)
+            // console.log(obj.address)
+            // console.log(obj.age)
+            const {name, address, age} = obj    // 왼쪽은 key 네임 일치시켜야됨 <- obj의 키를 꺼내서 일치하는 키와 매칭시켜줌
+            const txt = `이름은 ${name} 나이는 ${age}살 사는 곳은 ${address}`;
+            console.log(txt);
+        }
+        print(man)
+        print(cat)
+
+        function print2({name, age, address}){      // 순서는 상관없되, 이름으로 해줘야됨
+            const txt = `이름은 ${name} 나이는 ${age}살 사는 곳은 ${address}`;
+            console.log(txt);          
+        }
+        print2(man)
+        print2(cat)
+
+
+        const num = {a : 1}
+        function print3(a, b){
+            console.log(a)      // {a : 1}
+            console.log(b)      // undefined -> 해결하기 위해, 초기값 세팅가능
+        }
+        print3(num)
+
+        function print4(a, b=2){
+            console.log(a)      // {a : 1}
+            console.log(b)      // 2
+        }
+        print4(num)
+
+
+        const product = {
+            productItem: 3377,
+            type: 'A'
+        }
+        // const obj = product.type;
+        // console.log(obj)    // A
+
+        const {productItem, type} = product;   
+        console.log(productItem);  // 3377
+
+        const {type:alp} = product;   
+        console.log(alp)    //A
+
+
+        let[areaNum, area] = [02, 'seoul']
+        let{area:a, areaNum:b = 03} ={area, areaNum}
+        console.log(a)          //seoul
+        console.log(b)          // 2 
+        console.log(area)       // seoul
+        console.log(areaNum)    // 2
+
+    </script>
+</body>
+</html>
