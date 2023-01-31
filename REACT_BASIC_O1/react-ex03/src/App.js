@@ -1,5 +1,6 @@
 import './App.css';
 import UserList from './component/UserList/UserList'
+import NewsList from './component/NewsList/NewsList'
 
 import { useState } from 'react';
 
@@ -39,6 +40,7 @@ function App() {
       <div className={isOn? `userList-box on`: `userList-box off`}>
         <UserList/>
       </div>
+      <NewsList/>
     </div>
   );
 }
