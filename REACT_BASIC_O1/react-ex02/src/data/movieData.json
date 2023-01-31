@@ -1,0 +1,99 @@
+[
+    {
+      "id": "1",
+      "poster": "https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202205/18538_103_1.jpg",
+      "title": "닥터 스트레인지: 대혼돈의 멀티버스",
+      "rateinfo": 0.3,
+      "starinfo": 8.9,
+      "grade": "12"
+    },
+    {
+      "id": "2",
+      "poster": "https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202205/18677_103_1.jpg",
+      "title": "그대가 조국",
+      "rateinfo": 0.1,
+      "starinfo": 9.9,
+      "grade": "12"
+    },
+    {
+      "id": "3",
+      "poster": "https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202206/18725_103_1.jpg",
+      "title": "애프터 양",
+      "rateinfo": 0.1,
+      "starinfo": 8.0,
+      "grade": "전체"
+    },
+    {
+      "id": "4",
+      "poster": "https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202206/18733_103_1.jpg",
+      "title": "이공삼칠",
+      "rateinfo": 0.1,
+      "starinfo": 0.0,
+      "grade": "15"
+    },
+    {
+      "id": "5",
+      "poster": "https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202205/18633_103_1.jpg",
+      "title": "아치의 노래, 정태춘",
+      "rateinfo": 0.0,
+      "starinfo": 9.7,
+      "grade": "전체"
+    },
+    {
+      "id": "6",
+      "poster": "https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202206/18715_103_1.jpg",
+      "title": "카시오페아",
+      "rateinfo":0.0,
+      "starinfo":9.2,
+      "grade": "12"
+    },
+    {
+      "id":"7",
+      "poster": "https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202205/18656_103_1.jpg",
+      "title": "우연과 상상",
+      "rateinfo":0.0,
+      "starinfo":8.7,
+      "grade": "15"
+    },
+    {
+      "id":"8",
+      "poster": "https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202206/18698_103_1.jpg",
+      "title": "윤시내가 사라졌다",
+      "rateinfo":0.0,
+      "starinfo": 8.5,
+      "grade": "12"
+    },
+
+   {
+      "id": "9",
+      "poster": "https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202206/18765_103_1.jpg",
+      "title": "괴물, 유령, 자유인",
+      "rateinfo": 0.0,
+      "starinfo": 6.0,
+      "grade": "15"
+    },
+   {
+      "id": "10",
+      "poster": "https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202205/18626_103_1.jpg",
+      "title": "오마주",
+      "rateinfo": 0.0,
+      "starinfo": 8.7,
+      "grade": "12"
+    },
+    {
+      "id": "11",
+      "poster": "https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202206/18765_103_1.jpg",
+      "title": "괴물, 유령, 자유인",
+      "rateinfo": 0.0,
+      "starinfo": 6.0,
+      "grade": "15"
+    },
+   {
+      "id": "12",
+      "poster": "https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202205/18626_103_1.jpg",
+      "title": "오마주",
+      "rateinfo": 0.0,
+      "starinfo": 8.7,
+      "grade": "12"
+    }
+]
