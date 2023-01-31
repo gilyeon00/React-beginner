@@ -4,18 +4,27 @@ import './movieList.css'
 
 const MovieList = () => {
     const movies = movieData;
-    console.log(movies)
+    const gradeColor = {
+        '12':'gradeinfo on12',
+        '15':'gradeinfo on15',
+        '전체':'gradeinfo onall',
+    }
 
     return (
         <div>
             <ul className='movie-lists'> {
                 movies.map(movie => {
+                    const gradeValue = movie.grade;
                     return (
                         <li className='movie-item' key={movie.id}>
                             <img src={movie.poster} alt={movie.title} />
-                            <h2 className='title'>{movie.title}</h2>
-                            <span className='ticket-sale'>{movie.rateinfo}%</span>
-                            <span className='star'>⭐️{movie.starinfo}</span>
+                            <span className={gradeColor[gradeValue]}>{movie.grade} </span>
+                            <span className='txt-field'>
+                                <h2 className='title'>{movie.title}</h2>
+                                <text className='ticket-ratio'>{movie.rateinfo}%</text>
+                                <text className='star'>⭐️{movie.starinfo}</text>
+                            </span>
+
                         </li>
                     )
                 })

@@ -3,9 +3,28 @@
     height: 100vh;
     min-width: 250px;
     overflow-y : auto;
-    /* border-color: black; */
-    /* margin: 80px auto; */
-    /* padding: 0 20px 0 20px; */
+}
+
+.gradeinfo.onall{
+    background-color: aquamarine;
+}
+.gradeinfo.on12{
+    background-color: rgb(255, 234, 127);
+}
+.gradeinfo.on15{
+    background-color: rgb(255, 127, 127);
+}
+
+.gradeinfo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute;  */
+
 }
 
 .movie-item{
@@ -20,11 +39,15 @@
     height: auto;
 }
 
-.movie-item>.title{
+.movie-item>.txt-field>.title{
     font-size: 15px;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
 }
 
-.movie-item>.ticket-sale, .movie-item>.star{
+.movie-item>.txt-field>.ticket-ratio, .movie-item>.txt-field>.star{
     margin: 5px;
     padding: 5px;
 }
