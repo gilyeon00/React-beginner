@@ -12,7 +12,7 @@ const CanSlider = () => {
     return (
         <CanSliderBox>
             <Swiper
-                spaceBetween={30}
+                spaceBetween={20}
                 slidesPerView={5}
 
                 modules={[Navigation, Pagination, Autoplay]}
@@ -49,7 +49,7 @@ const CanSliderBox = styled.div `
     width: 1200px;
     height: auto;
     margin: 3rem auto;
-    $ .swiper-slide img{
+    & .swiper-slide img{
         width: 150px;
     }
 `
