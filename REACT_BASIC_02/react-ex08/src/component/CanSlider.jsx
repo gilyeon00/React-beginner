@@ -1,16 +1,25 @@
+// https://swiperjs.com/react
 import React from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react'
-import 'swiper/css'
 import styled from 'styled-components'
+import { Navigation, Pagination } from 'swiper';
+
+import 'swiper/css'
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const CanSlider = () => {
     return (
         <CanSliderBox>
             <Swiper
-                spaceBetween={10}
-                slidesPerView={4}
+                spaceBetween={30}
+                slidesPerView={5}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
+
+                modules={[Navigation, Pagination]}
+                navigation
+                pagination={{ clickable: true }}
                 >
             <SwiperSlide><img src ="./img/slide/can1.jpg" alt=""/></SwiperSlide>
             <SwiperSlide><img src ="./img/slide/can2.jpg" alt=""/></SwiperSlide>
