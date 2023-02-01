@@ -1,0 +1,16 @@
+*{margin: 0; padding: 0;}
+
+ul,li{list-style: none;}
+
+body{
+  color: #666;
+}
+
+.App{
+  width: 800px;
+  height: 300px;
+  margin: 50px auto;
+  border : 2px solid #fbd4fb;
+  background: url(../public/asset/img/note-bg.png) repeat-y #fff8d4;
+  box-shadow: 2px 2px 15px rgba(0, 0,0,0.5);
+}
