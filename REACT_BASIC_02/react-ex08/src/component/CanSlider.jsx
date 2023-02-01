@@ -2,7 +2,7 @@
 import React from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react'
 import styled from 'styled-components'
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper';
 
 import 'swiper/css'
 import 'swiper/css/navigation';
@@ -13,13 +13,17 @@ const CanSlider = () => {
         <CanSliderBox>
             <Swiper
                 spaceBetween={30}
-                slidesPerView={5}
+                slidesPerView={4}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
 
-                modules={[Navigation, Pagination]}
+                modules={[Navigation, Pagination, Autoplay]}
                 navigation
                 pagination={{ clickable: true }}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction:false,
+                }}
                 >
             <SwiperSlide><img src ="./img/slide/can1.jpg" alt=""/></SwiperSlide>
             <SwiperSlide><img src ="./img/slide/can2.jpg" alt=""/></SwiperSlide>
