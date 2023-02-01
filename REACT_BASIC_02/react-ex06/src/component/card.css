@@ -1,0 +1,43 @@
+.card{
+    width: 250px;
+    height: 300px;
+    border: solid rgb(255,225,555) 2px;
+    border-radius: 8%;
+    margin: 0.5rem;
+    list-style: none;
+
+}
+
+.card dl{
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.card img{
+    width: 120px;
+    height: 120px;
+    padding: 0.2rem;
+}
+
+.card dd{
+    font-size: 0.8rem;
+}
+
+.card-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: auto;
+}
+
+.blind {
+    display: none;
+}
+
+.service-title{
+    font-size: 5rem;
+    color: rgb(255,225,555);
+    margin-top: 0.8rem;
+    margin-bottom: 3rem;
+}
