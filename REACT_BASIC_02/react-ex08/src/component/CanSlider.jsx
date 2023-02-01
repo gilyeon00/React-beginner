@@ -13,9 +13,7 @@ const CanSlider = () => {
         <CanSliderBox>
             <Swiper
                 spaceBetween={30}
-                slidesPerView={4}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+                slidesPerView={5}
 
                 modules={[Navigation, Pagination, Autoplay]}
                 pagination={{ clickable: true }}
@@ -27,7 +25,7 @@ const CanSlider = () => {
                     nextEl: '.next',
                     prevEl: '.prev'
                 }}
-                >
+            >
             <SwiperSlide><img src ="./img/slide/can1.jpg" alt=""/></SwiperSlide>
             <SwiperSlide><img src ="./img/slide/can2.jpg" alt=""/></SwiperSlide>
             <SwiperSlide><img src ="./img/slide/can3.jpg" alt=""/></SwiperSlide>
@@ -51,11 +49,9 @@ const CanSliderBox = styled.div `
     width: 1200px;
     height: auto;
     margin: 3rem auto;
-
-    $ .swiper img{
+    $ .swiper-slide img{
         width: 150px;
     }
-    
 `
 
 const NaviPrev=styled.button`
@@ -66,6 +62,7 @@ const NaviPrev=styled.button`
     let: 50px;
     transform: translateY(-50%);    // 본인 높이의 50% 위로 올라감
     z-index: 5000;
+    border: none;
     
 `
 
