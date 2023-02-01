@@ -92,6 +92,6 @@ const BoardLi = styled.li`
 `
 
 const BoardUl = styled.ul `
-    width : 1000px;
+    width : 1200px;
     font-size : 0.875rem
 `
