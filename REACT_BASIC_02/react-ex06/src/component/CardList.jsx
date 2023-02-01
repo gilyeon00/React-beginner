@@ -26,7 +26,7 @@ const CardList = () => {
 
     return (
         <div>
-             <h3>CardList</h3>
+             <h3 className='service-title'>Cardstargram</h3>
              <ul className='card-wrap'>
                 {
                     cardData.map((item) => <Carditem key={item.id} card={item}/>)
