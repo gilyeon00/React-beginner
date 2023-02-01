@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled ,{keyframes} from 'styled-components';
 
 const Style = () => {
     return (
@@ -13,11 +13,11 @@ const Style = () => {
                 <Btn borderColor='yellow'>active</Btn>
                 <Btn>2023년 2월 1일</Btn>
                 <Text size="20px" color="#ccc">2023년 2월 1일</Text>
-                <Text>수요일</Text>
-                <Text>오후 3시</Text>
+                <Text color="#fad">수요일</Text>
+                <Text color="#cce">오후 3시</Text>
             </Box>
             <Box>
-
+                <AniBtn>Animation</AniBtn>
             </Box>
         </div>
     );
@@ -47,8 +47,21 @@ const Text = styled.p`
 
 const Btn = styled.button`
     width: 200px;
-    height: 20px;
+    height: 40px;
     border: 1px solid ${(props) => props.borderColor};
     background-color: #fff;
+    margin : 1.2rem
+`
 
+const colorChange = keyframes`
+    0% {background-color : #d3d; border-radius: 10px;}
+    50% {background-color : #33a; border-radius: 20px;}
+    100% {background-color : #e28; border-radius: 10px;}
+`
+
+// 확장 (상속)
+const AniBtn = styled(Btn)`
+    width: 400px;
+    animation: ${colorChange} 1.5s alternate infinite;
+    border: none;
 `
