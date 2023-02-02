@@ -3,7 +3,7 @@ import TodoList from '../TodoList'
 import TodoAddBtn from '../TodoAddBtn'
 import './index.css'
 
-const TodoTitleArea = ({todos, setSelectTodoIndex, addTodo, delTodo}) => {
+const TodoTitleArea = ({todos, setSelectTodoIndex, addTodo, delTodo, selectTodoIndex}) => {
     return (
         <div className='TitleArea'>
             <h1>연길's Planner</h1>
@@ -11,7 +11,7 @@ const TodoTitleArea = ({todos, setSelectTodoIndex, addTodo, delTodo}) => {
                 todos = {todos} 
                 setSelectTodoIndex={setSelectTodoIndex}
                 delTodo={delTodo}
-                selectTodoIndex />
+                selectTodoIndex={selectTodoIndex} />
             <TodoAddBtn onClick={addTodo}/>
         </div>
     );

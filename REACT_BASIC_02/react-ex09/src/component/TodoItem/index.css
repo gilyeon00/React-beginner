@@ -1,14 +1,16 @@
 .TodoDelBtn{
     border : rgb(172, 216, 255) 2px solid;
-    width: 60px;
+    width: 50px;
     height: 30px;
     background: none;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 4px;
     text-indent: 0;
     font-size: 0.75rem;
     position: absolute;
     right: 1rem;
+    color: rgb(6, 34, 59);
+    cursor: pointer;
 }
 
 .TodoItem{
@@ -18,11 +20,12 @@
     text-indent: 80px;
     position: relative;
     cursor: pointer;
-
+    padding: 8px 0;
+    font-size: 1rem;
 }
 
 .TodoItem:hover{
-    border-bottom: rgb(172, 216, 255) 2px dashed;
+    border-bottom: rgb(167, 193, 218) 2px dashed;
 }
 
 .TodoItem.on{

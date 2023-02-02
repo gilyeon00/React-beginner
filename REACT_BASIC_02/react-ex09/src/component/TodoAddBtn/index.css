@@ -1,13 +1,17 @@
+
+.TodoAddBtnBox{
+    padding : 10px 0;
+    text-align: center;
+}
+
 .TodoAddBtn{
     width: 70px;
     height: 40px;
-    line-height: 40px;
-    text-align: center;
-    padding : 10px 0;
     border: 3px solid rgb(172, 216, 255) ;
-    background-color: rgba(172,216,255,.3);
-    border-radius: 3px;
+    background-color: #acd8ff4d;
+    border-radius: 4px;
+    color: rgb(6, 34, 59);
+    cursor: pointer;
 }
-
 
 
