@@ -5,7 +5,7 @@ const TodoContainer = ({todo, setTodo}) => {
     if(todo === undefined){
         return (
             <div className='NothingNoticeBox'>
-                <h1>작성된 todo 리스트가 없습니다.</h1>
+                <h1>선택된 todo 리스트가 없습니다.</h1>
                 <h2>할 일을 추가해보세요🐹</h2>
             </div>
         )
