@@ -1,8 +1,8 @@
 import React from 'react';
 
-const TodoItem = ({children}) => {
+const TodoItem = ({children, onClick}) => {
     return (
-        <div>
+        <div onClick={onClick} >
             {children}
             <button> Del - </button>
         </div>
