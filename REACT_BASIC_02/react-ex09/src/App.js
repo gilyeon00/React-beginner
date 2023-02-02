@@ -33,6 +33,8 @@ function App() {
           content : '해야할 일을 기록해봐요💍'
         }
       ])
+
+      setSelectTodoIndex(todos.length)
   }
 
   const delTodo = (index) => {
@@ -47,7 +49,8 @@ function App() {
         todos = {todos} 
         setSelectTodoIndex = {setSelectTodoIndex}
         addTodo={addTodo}
-        delTodo={delTodo} />
+        delTodo={delTodo} 
+        selectTodoIndex />
 
       <TodoContainer 
         todo = {todos[selectTodoIndex]} 

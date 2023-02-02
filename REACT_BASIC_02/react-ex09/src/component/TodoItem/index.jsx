@@ -1,11 +1,11 @@
 import React from 'react';
 import './index.css'
 
-const TodoItem = ({children, onClick, onClickDel}) => {
+const TodoItem = ({children, onClick, onClickDel, isSelected}) => {
     return (
-        <div className='TodoItem' onClick={onClick} >
+        <div onClick={onClick} className={'TodoItem'+ (isSelected ? ' on' : '')} >
             {children}
-            <button className='TodoDelBtn' onClick={onClickDel}> Del - </button>
+            <button className='TodoDelBtn' onClick={onClickDel}> Del </button>
         </div>
     );
 };

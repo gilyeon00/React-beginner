@@ -10,7 +10,8 @@ const TodoTitleArea = ({todos, setSelectTodoIndex, addTodo, delTodo}) => {
             <TodoList 
                 todos = {todos} 
                 setSelectTodoIndex={setSelectTodoIndex}
-                delTodo={delTodo} />
+                delTodo={delTodo}
+                selectTodoIndex />
             <TodoAddBtn onClick={addTodo}/>
         </div>
     );
