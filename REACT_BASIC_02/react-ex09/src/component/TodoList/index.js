@@ -1,13 +1,15 @@
 import React from 'react';
 import TodoItem from '../TodoItem';
 
-const TodoList = ({todo}) => {
+const TodoList = ({todos}) => {
     return (
         <div>
             {
-            todo.map( (todo, index) => {
+            todos.map( (todo, index) => {
                 return (
-                    <TodoItem key={index}/>
+                    <TodoItem key={index} index={index}>
+                        {todo.title}
+                    </TodoItem>
                 )
 
             })
