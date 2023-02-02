@@ -1,10 +1,10 @@
 import React from 'react';
 
-const TodoItem = ({children, onClick}) => {
+const TodoItem = ({children, onClick, onClickDel}) => {
     return (
         <div onClick={onClick} >
             {children}
-            <button> Del - </button>
+            <button onClick={onClickDel}> Del - </button>
         </div>
     );
 };

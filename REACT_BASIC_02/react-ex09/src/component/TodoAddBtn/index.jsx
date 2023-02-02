@@ -1,9 +1,9 @@
 import React from 'react';
 
-const TodoAddBtn = () => {
+const TodoAddBtn = ({onClick}) => {
     return (
         <div>
-            <button> ADD+ </button>
+            <button onClick={onClick}> ADD+ </button>
         </div>
     );
 };
