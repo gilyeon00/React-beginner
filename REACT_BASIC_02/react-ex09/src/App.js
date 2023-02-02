@@ -15,14 +15,15 @@ function App() {
 
   ]);
 
+  const [selectTodoIndex, setSelectTodoIndex] = useState(0);
+
   return (
     <div className="App">
-
       <TodoTitleArea todos = {todos}/>
-      <TodoContainer/>
+      <TodoContainer todo = {todos[selectTodoIndex]} setTodos={setTodos}/>
 
     </div>
-  );
+  );  
 }
 
 export default App;

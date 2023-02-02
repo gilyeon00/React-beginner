@@ -1,12 +1,18 @@
 import React from 'react';
 
-const TodoContainer = () => {
+const TodoContainer = ({todo, setTodo}) => {
     return (
-        <div>
-            <input 
-                type="text"
-                className='todo-title'>
-            </input>
+        <div className='todo-container'>
+            <div>
+                <input
+                    type="text"
+                    className='todo-title'
+                    value={todo.title}>
+                </input>
+            </div>
+            <div>
+                <textarea />
+            </div>
         </div>
     );
 };

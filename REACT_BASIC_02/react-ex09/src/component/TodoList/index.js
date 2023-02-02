@@ -5,15 +5,15 @@ const TodoList = ({todos}) => {
     return (
         <div>
             {
-            todos.map( (todo, index) => {
-                return (
-                    <TodoItem key={index} index={index}>
-                        {todo.title}
-                    </TodoItem>
-                )
+                todos.map( (todo, index) => {
+                    return (
+                        <TodoItem key={index} index={index}>
+                            {todo.title}
+                        </TodoItem>
+                    )
 
-            })
-        }
+                })
+            }
         </div>
     );
 };
