@@ -1,10 +1,11 @@
 import React from 'react';
+import './index.css'
 
 const TodoItem = ({children, onClick, onClickDel}) => {
     return (
-        <div onClick={onClick} >
+        <div className='TodoItem' onClick={onClick} >
             {children}
-            <button onClick={onClickDel}> Del - </button>
+            <button className='TodoDelBtn' onClick={onClickDel}> Del - </button>
         </div>
     );
 };

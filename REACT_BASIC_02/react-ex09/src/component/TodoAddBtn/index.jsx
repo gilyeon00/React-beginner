@@ -1,9 +1,9 @@
 import React from 'react';
-
+import './index.css'
 const TodoAddBtn = ({onClick}) => {
     return (
         <div>
-            <button onClick={onClick}> ADD+ </button>
+            <button className='TodoAddBtn' onClick={onClick}> ADD+ </button>
         </div>
     );
 };

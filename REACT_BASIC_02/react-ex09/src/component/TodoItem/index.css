@@ -1,0 +1,32 @@
+.TodoDelBtn{
+    border : rgb(172, 216, 255) 2px solid;
+    width: 60px;
+    height: 30px;
+    background: none;
+    text-align: center;
+    border-radius: 3px;
+    text-indent: 0;
+    font-size: 0.75rem;
+    position: absolute;
+    right: 1rem;
+}
+
+.TodoItem{
+    height: 30px;
+    line-height: 30px; /* 글자가 행간의 중간에 오도록 */
+    border-bottom: rgb(167, 193, 218) 1px solid;
+    text-indent: 80px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.TodoItem:hover{
+    border-bottom: rgb(172, 216, 255) 2px dashed;
+}
+
+.TodoItem.on{
+    background-color: rgba(172, 216, 255);
+    font-weight: 500;
+    color: rgb(43, 99, 149);
+}
