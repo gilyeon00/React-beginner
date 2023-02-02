@@ -11,28 +11,37 @@ function App() {
 
   const setTodo = (newTodo) => {
     const newTodos = [...todos];    // 새로운 래퍼런스로 
-    // console.log(selectTodoIndex)
     newTodos[selectTodoIndex] = newTodo;
-    // console.log(newTodo)
-    setTodos(newTodos)
+    // setTodos(newTodos)
+    setTodos('todo', newTodos)
+    return newTodos
   }
 
   const addTodo = () => {
-      setTodos([
-        ...todos,
-        {
-          title : '제목을 입력해주세요🧚',
-          content : '해야할 일을 기록해봐요💍'
-        }
-      ])
-
+      setTodos((todos) => {
+        const newTodos = [
+          ...todos,
+          {
+            title : '제목을 입력해주세요🧚',
+            content : '해야할 일을 기록해봐요💍'
+          }
+        ]
+        setItem('todo', newTodos)
+        return newTodos
+      })
       setSelectTodoIndex(todos.length)
   }
 
   const delTodo = (index) => {
-    const newTodos = [...todos];
-    newTodos.splice(index, 1);
-    setTodos(newTodos);
+    setTodos((todos) => {
+      const newTodos =[...todos];
+      newTodos.splice(index, 1);
+      setItem('todo',newTodos)
+      return newTodos
+    })
+    if(index === selectTodoIndex){
+      setSelectTodoIndex(0)
+    }
   }
 
   return (
