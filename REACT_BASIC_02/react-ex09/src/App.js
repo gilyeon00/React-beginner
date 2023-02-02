@@ -2,18 +2,10 @@ import './App.css';
 import { useState} from 'react'
 import TodoTitleArea from './component/TodoTitleArea';
 import TodoContainer from './component/TodoContainer';
+import { setItem, getItem } from './libs/storage';
 
 function App() {
-  const [todos, setTodos] = useState([
-    {
-      title: 'title1',
-      contents: '오늘은 목요일!'
-    },{
-      title: 'title2',
-      contents: '내일은 금요일!'
-    }
-
-  ]);
+  const [todos, setTodos] = useState([ getItem('todo') || [] ]);    // 없다면 빈배열 가져옴
 
   const [selectTodoIndex, setSelectTodoIndex] = useState(0);
 
