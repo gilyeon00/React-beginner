@@ -4,6 +4,7 @@ ul,li{list-style: none;}
 
 body{
   color: #666;
+  background:url(../public/asset/img/bg.png)
 }
 
 .App{
