@@ -19,7 +19,9 @@ function App() {
 
   const setTodo = (newTodo) => {
     const newTodos = [...todos];    // 새로운 래퍼런스로 
+    console.log(selectTodoIndex)
     newTodos[selectTodoIndex] = newTodo;
+    console.log(newTodo)
     setTodos(newTodos)
   }
 
@@ -33,13 +35,10 @@ function App() {
       ])
   }
 
-  const delTodo = () => {
-    setTodos([
-      ...todos,
-      {
-
-      }
-    ])
+  const delTodo = (index) => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
   }
 
   return (
@@ -49,6 +48,7 @@ function App() {
         setSelectTodoIndex = {setSelectTodoIndex}
         addTodo={addTodo}
         delTodo={delTodo} />
+
       <TodoContainer 
         todo = {todos[selectTodoIndex]} 
         setTodo={setTodo} />
