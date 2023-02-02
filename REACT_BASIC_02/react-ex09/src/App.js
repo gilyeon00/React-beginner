@@ -1,5 +1,5 @@
 import './App.css';
-import { useState} from 'react'
+import { useCallback, useState} from 'react'
 import TodoTitleArea from './component/TodoTitleArea';
 import TodoContainer from './component/TodoContainer';
 import { setItem, getItem } from './libs/storage';
@@ -11,17 +11,16 @@ function App() {
   // 글쓰면서 3초간격으로 저장
   const debounceSetItem = debounce(setItem, 3000);
 
-  const setTodo = (newTodo) => {
+  const setTodo = useCallback((newTodo) => {
     const newTodos = [...todos];    // 새로운 래퍼런스로 
     newTodos[selectTodoIndex] = newTodo;
     // setTodos(newTodos)
-    debounceSetItem('todo', newTodos);
     setTodos(newTodos);
+    debounceSetItem('todo', newTodos);
     return newTodos
-  }
+  },[todos,selectTodoIndex] )
 
-  const addTodo = () => {
-      setTodos((todos) => {
+  const addTodo = useCallback(() => {
         const newTodos = [
           ...todos,
           {
@@ -29,14 +28,12 @@ function App() {
             content : '해야할 일을 기록해봐요💍'
           }
         ]
-        debounceSetItem('todo', newTodos);
         setTodos(newTodos);
-        return newTodos
-      })
-      setSelectTodoIndex(todos.length)
-  }
+        setSelectTodoIndex(todos.length)
+        debounceSetItem('todo', newTodos)
+      }, [todos])
 
-  const delTodo = (index) => {
+  const delTodo = useCallback((index) => {
     setTodos((todos) => {
       const newTodos =[...todos];
       newTodos.splice(index, 1);
@@ -47,7 +44,7 @@ function App() {
     if(index === selectTodoIndex){
       setSelectTodoIndex(0)
     }
-  }
+  },[selectTodoIndex, todos])
 
   return (
     <div className="App">
