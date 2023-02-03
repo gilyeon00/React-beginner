@@ -66,7 +66,7 @@ function App() {
       <BrowserRouter>
       <Header search={search} clickLogo={clickLogo} />
         <Routes>
-          <Route path="/" element={<Home videoItems={videoItems} search={search}  selectVideoItem={selectVideoItem} />} />
+          <Route path="/" element={<Home videoItems={videoItems} search={search}  selectVideoItem={selectVideoItem} clickLogo={clickLogo} />} />
           <Route path="/search" element={<Search videoItems={videoItems} search={search} selectVideoItem={selectVideoItem} />} /> 
           <Route path="/watch" element={<Watch videoItems={videoItems} search={search} selectVideoItem={selectVideoItem} selectVideo={selectVideo} selectedWatch={selectedWatch} />}/> 
         </Routes>
