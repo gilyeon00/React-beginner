@@ -1,6 +1,7 @@
 import React from 'react';
 import './videoItem.css'
 import { Link } from 'react-router-dom';
+import * as common from './../libs/common'
 
 const VideoItem = ({videoItem, selectVideoItem, display}) => {
     return (
@@ -17,7 +18,7 @@ const VideoItem = ({videoItem, selectVideoItem, display}) => {
                     <div className='infoText'>
                         <p className='title'> {videoItem.snippet.title}</p>
                         <p className='channel'> {videoItem.snippet.channelTitle}</p>
-                        <p className='publishDate'> {videoItem.snippet.publihedAt}</p>
+                        <p className='publishDate'> {common.publishDate(videoItem.snippet.publishedAt)}</p>
                     </div>
                 </div>
             </div>

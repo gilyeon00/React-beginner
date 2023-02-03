@@ -65,6 +65,17 @@
 }
 
 .channel {
-    font-size: 0.7rem;
-    color:#c0c0c0;
-  }
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.75rem;
+    color:#a3a2a2;
+    
+}
+
+.publishDate{
+    float: right;
+    font-size: 0.5rem;
+    color: #c0c0c0;
+}

@@ -5,6 +5,6 @@
     padding:0 8px 16px
 }
 
-.videoList.list-v{
-    
+.videoList.list-v {
+    flex-direction : column;
 }
