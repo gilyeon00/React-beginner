@@ -26,7 +26,7 @@ const Header = ({search, clickLogo}) => {
     return (
         <div className='header'>
             <div className='logoArea'>
-                <h1> <Link to="/" onClick={clickLogo}/>YOUTUBE</h1>
+                <h1><Link to="/" onClick={clickLogo}>YOUTUBE</Link></h1>
             </div>
             <div className='searchInputArea'>
                 <input

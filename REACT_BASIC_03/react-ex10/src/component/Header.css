@@ -17,12 +17,14 @@
 }
 
 .searchInput{
-    width:35vw;
+    width:50vw;
     height: 40px;
     padding-left: 10px;
     border:1px solid #dfdfdf;
     font-size: 14px;
     outline: none;
+    border-radius: 20px;
+    margin: 0 0.2rem;
 }
 
 .searchInputArea{
@@ -37,6 +39,7 @@
     border-top:1px solid #dfdfdf;
     width:60px;height: 40px;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .topMenuArea{
