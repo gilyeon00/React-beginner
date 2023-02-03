@@ -1,11 +1,13 @@
 import React from 'react';
 
-const sidebar = () => {
+const Sidebar = () => {
     return (
-        <div>
-            
+        <div className='sideBar'>
+            <button>홈</button>
+            <button>Shorts</button>
+            <button>구독</button>
         </div>
     );
 };
 
-export default sidebar;
+export default Sidebar;

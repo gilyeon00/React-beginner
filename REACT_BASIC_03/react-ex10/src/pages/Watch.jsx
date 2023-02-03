@@ -1,9 +1,16 @@
 import React from 'react';
+import VideoWatch from '../component/VideoWatch';
+import VideoList from '../component/VideoList';
 
 const Watch = () => {
     return (
-        <div>
-            와치
+        <div className='watch-content'>
+            <div className='view'>
+                <VideoWatch />
+           </div> 
+            <div className='list'>
+                <VideoList />
+            </div> 
         </div>
     );
 };

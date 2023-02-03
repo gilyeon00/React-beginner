@@ -1,0 +1,20 @@
+.header{
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 64px;
+    padding: 12px 30px;
+    border-bottom: 1px solid #c0c0c0;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+.searchInputArea{
+    display: flex;
+    align-items: center;
+    border: 1px solid #dfdfdf;
+    font-size: 14px;
+    outline: none;
+}

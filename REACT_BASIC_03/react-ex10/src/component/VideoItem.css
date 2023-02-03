@@ -1,0 +1,14 @@
+.videoItem{
+    width: 20%;
+    padding: 0.4em;
+}
+
+.videoItem.list-v{
+    flex: 1 1 20%       
+    /* 확대 축소 기본이미지크기 */
+}
+
+.videoItem.list-h{
+    flex: 1 1 50%
+}
+
