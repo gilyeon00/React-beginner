@@ -10,3 +10,8 @@
 .list{
     flex: 1 1 40%;
 }
+
+.watch-content{
+    display: flex;
+    padding-top: 64px;
+}

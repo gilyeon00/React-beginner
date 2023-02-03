@@ -1,3 +1,7 @@
+.logoArea{
+    display: flex;
+}
+
 .header{
     display: flex;
     position:sticky;
@@ -9,6 +13,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 10000;
+    cursor: pointer;
 }
 
 .searchInput{
@@ -31,4 +36,9 @@
     border-right:1px solid #dfdfdf;
     border-top:1px solid #dfdfdf;
     width:60px;height: 40px;
+    cursor: pointer;
+}
+
+.topMenuArea{
+    float: right;
 }

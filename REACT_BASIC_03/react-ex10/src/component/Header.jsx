@@ -27,27 +27,26 @@ const Header = ({search, clickLogo}) => {
         <div className='header'>
             <div className='logoArea'>
                 <h1> <Link to="/" onClick={clickLogo}/>YOUTUBE</h1>
-                <div className='searchInputArea'>
-                    <input
-                        type = 'search'
-                        placeholder='검색어를 입력하세요'
-                        className='searchInput'
-                        ref={inputRef}
-                        onKeyDown={summitSearchEnter} />
-                    <button 
-                        className='searchBtn'
-                        onClick={summitSearchBtn} > 
-                        검색 </button>
-                </div>
-                <div className='topMenuArea'>
-                    <button>알림</button>
-                    <button>동영상 업로드</button>
-                    <button>프로필</button>
-                </div>
-                
-            
+            </div>
+            <div className='searchInputArea'>
+                <input
+                    type = 'search'
+                    placeholder='검색어를 입력하세요'
+                    className='searchInput'
+                    ref={inputRef}
+                    onKeyDown={summitSearchEnter} />
+                <button 
+                    className='searchBtn'
+                    onClick={summitSearchBtn} > 
+                    검색 </button>
+            </div>
+            <div className='topMenuArea'>
+                <button>알림</button>
+                <button>동영상 업로드</button>
+                <button>프로필</button>
             </div>
         </div>
+
     );
 };
 
