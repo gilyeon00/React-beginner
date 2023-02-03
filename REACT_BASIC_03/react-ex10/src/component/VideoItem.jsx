@@ -1,12 +1,14 @@
 import React from 'react';
 import './VideoItem.css'
+import { Link } from 'react-router-dom';
 
-const VideoItem = ({videoItem}) => {
+const VideoItem = ({videoItem, selectVideoItem}) => {
     return (
         <li className='videoItem'>
-            <div className='item'>
+            <Link to="/watch">
+            <div className='item' onClick={selectVideoItem(videoItem)}>
                 <div className='thumnail'>
-                    <img src={videoItem.snippet.thumbnails.medium} alt="videoThumnail" />
+                    <img src={videoItem.snippet.thumbnails.medium.url} alt="videoThumnail" />
                 </div>
                 <div className='metaData'>
                     <div className='channelImg'>
@@ -19,6 +21,7 @@ const VideoItem = ({videoItem}) => {
                     </div>
                 </div>
             </div>
+            </Link>
         </li>
     );
 };
