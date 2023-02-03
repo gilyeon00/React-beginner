@@ -1,7 +1,7 @@
 import React from 'react';
 import {useRef} from "react";
 import { useNavigate, Link} from 'react-router-dom';
-
+import './Header.css'
 const Header = ({search, clickLogo}) => {
     const inputRef = useRef();
     let navigate = useNavigate();
@@ -22,11 +22,10 @@ const Header = ({search, clickLogo}) => {
         }
     }
 
-
     return (
         <div className='header'>
             <div className='logoArea'>
-                <h1> <Link to="/"/>YOUTUBE</h1>
+                <h1> <Link to="/" onClick={clickLogo}/>YOUTUBE</h1>
                 <div className='searchInputArea'>
                     <input
                         type = 'search'
