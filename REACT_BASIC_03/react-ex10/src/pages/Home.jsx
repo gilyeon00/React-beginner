@@ -12,6 +12,7 @@ const Home = ({videoItems, selectVideoItem}) => {
                 <VideoList 
                     videoItems = {videoItems}
                     selectVideoItem = {selectVideoItem}
+                    display='list-v'
                 />
             </div>
         </div>

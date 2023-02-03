@@ -1,7 +1,8 @@
 import React from 'react';
 import {useRef} from "react";
 import { useNavigate, Link} from 'react-router-dom';
-import './Header.css'
+import './header.css'
+
 const Header = ({search, clickLogo}) => {
     const inputRef = useRef();
     let navigate = useNavigate();

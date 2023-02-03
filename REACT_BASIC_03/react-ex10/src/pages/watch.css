@@ -1,0 +1,12 @@
+.watch-content{
+    display: flex;
+}
+
+.view {
+    flex: 1 1 60%;
+    justify-content: center;
+}
+
+.list{
+    flex: 1 1 40%;
+}

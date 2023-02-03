@@ -1,8 +1,8 @@
 import React from 'react';
 import VideoItem from './VideoItem';
-import './VideoList.css' 
+import './videoList.css' 
 
-const VideoList = ({videoItems, selectVideoItem}) => {
+const VideoList = ({videoItems, selectVideoItem, display}) => {
     return (
         <ul className='videoList'>
             {
@@ -10,7 +10,8 @@ const VideoList = ({videoItems, selectVideoItem}) => {
                     <VideoItem 
                         videoItem={videoItem}
                         key={VideoItem.id} 
-                        selectVideoItem={selectVideoItem}   />
+                        selectVideoItem={selectVideoItem}
+                        display = {display}  />
                 ))
             }
         </ul>

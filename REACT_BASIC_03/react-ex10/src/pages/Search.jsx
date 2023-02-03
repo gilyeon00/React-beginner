@@ -12,7 +12,8 @@ const Search = ({videoItems, selectVideoItem}) => {
             <div className='video-list'>
                 <VideoList 
                     selectVideoItem = {selectVideoItem}
-                    videoItems = {videoItems} />
+                    videoItems = {videoItems}
+                    display='list-v'/>
             </div>
         </div>
     );

@@ -1,6 +1,7 @@
 .videoItem{
-    width: 20%;
+    width: calc(20% -8px);
     padding: 0.4em;
+    border: 0.7px solid #ddd;
 }
 
 .videoItem.list-v{
@@ -9,11 +10,17 @@
 
 .videoItem.list-h{
     flex:1 1 50%;
+    border: none;
+}
+
+.videoItem.list-h .item{
+    display: flex;
 }
 
 .videoItem.list-h .thumnail{
     width: 30%;
 }
+
 .thumnail img{width: 100%;}
 
 .metaData{
@@ -24,8 +31,8 @@
 
 .metaData .channelImg{
     flex:0 0 36px;
-    width:36px;
-    height:36px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     overflow: hidden;
 }

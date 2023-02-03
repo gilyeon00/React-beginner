@@ -1,6 +1,7 @@
 import React from 'react';
 import VideoWatch from '../component/VideoWatch';
 import VideoList from '../component/VideoList';
+import './watch.css'
 
 const Watch = ({selectVideoItem, videoItems, selectedWatch}) => {
     return (
@@ -12,6 +13,7 @@ const Watch = ({selectVideoItem, videoItems, selectedWatch}) => {
                 <VideoList 
                 videoItems={videoItems}
                 selectVideoItem={selectVideoItem} 
+                display="list-h"
                 />
             </div> 
         </div>

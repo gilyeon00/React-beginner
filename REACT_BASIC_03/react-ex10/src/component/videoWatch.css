@@ -1,0 +1,23 @@
+.watchBox iframe{
+    display: flex;
+    margin: auto;
+    width: 98%;
+    border: none;
+}
+
+.txtContainer {
+    margin: 0.2rem;
+}
+.txtContainer h3{
+    font-size: 1rem;
+    text-align: right;
+}
+
+.txtContainer p{    
+    font-size: 0.75rem;
+    display: -webkit-box;
+    overflow: hidden;
+    word-break: break-all;
+    -webkit-line-clamp: 3;
+    text-align: center;
+}

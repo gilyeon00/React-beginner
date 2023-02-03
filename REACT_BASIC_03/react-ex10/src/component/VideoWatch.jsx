@@ -1,4 +1,5 @@
 import React from 'react';
+import './videoWatch.css';
 
 const VideoWatch = ({selectedWatch}) => {
     return (
