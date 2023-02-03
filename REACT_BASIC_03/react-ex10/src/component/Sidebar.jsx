@@ -3,10 +3,11 @@ import './sidebar.css'
 
 const Sidebar = () => {
     return (
-        <div className='sideBar'>
+        <div className='sidebar'>
             <button>홈</button>
             <button>Shorts</button>
             <button>구독</button>
+            <button>Originals</button>
         </div>
     );
 };

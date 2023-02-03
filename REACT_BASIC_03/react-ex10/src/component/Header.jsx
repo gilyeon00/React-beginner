@@ -1,6 +1,9 @@
 import React from 'react';
 import {useRef} from "react";
 import { useNavigate, Link} from 'react-router-dom';
+import { BiBell } from 'react-icons/bi'
+import { BiVideoPlus } from 'react-icons/bi'
+import { CgProfile } from 'react-icons/cg'
 import './header.css'
 
 const Header = ({search, clickLogo}) => {
@@ -26,7 +29,7 @@ const Header = ({search, clickLogo}) => {
     return (
         <div className='header'>
             <div className='logoArea'>
-                <h1><Link to="/" onClick={clickLogo}>YOUTUBE</Link></h1>
+                <h1><Link to="/" onClick={clickLogo}>📹YOUTUBE</Link></h1>
             </div>
             <div className='searchInputArea'>
                 <input
@@ -41,9 +44,9 @@ const Header = ({search, clickLogo}) => {
                     검색 </button>
             </div>
             <div className='topMenuArea'>
-                <button>알림</button>
-                <button>동영상 업로드</button>
-                <button>프로필</button>
+                <BiVideoPlus className='topIcon' size='1.8rem'>동영상 업로드</BiVideoPlus>
+                <BiBell className='topIcon'size='1.8rem'>알림</BiBell>
+                <CgProfile className='topIcon'size='1.8rem'>프로필</CgProfile>
             </div>
         </div>
 

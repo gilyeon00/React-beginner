@@ -15,3 +15,32 @@ a{
 body{
   padding-top: 64px
 }
+
+.contents-wrap{
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.3rem;
+}
+
+.contents-wrap .sidebar-box {
+  flex: 0 0 70px;
+}
+
+.sidebar button {
+  width: 5rem;
+  height: 1.6rem;
+  background: none;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  background-color: #cccccc;
+  transition: all .5s;
+}

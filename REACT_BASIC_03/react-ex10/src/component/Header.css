@@ -14,6 +14,7 @@
     align-items: center;
     z-index: 10000;
     cursor: pointer;
+    color: rgb(255,0,0);
 }
 
 .searchInput{
@@ -42,6 +43,13 @@
     border-radius: 20px;
 }
 
-.topMenuArea{
-    float: right;
+.topMenuArea .topIcon{
+    
+    color:#ccc;
+    cursor: pointer;
+    margin: 0 0.3rem;
+}
+
+.topMenuArea .topIcon:hover{
+    color:rgb(255, 0, 0);
 }

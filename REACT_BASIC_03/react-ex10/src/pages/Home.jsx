@@ -1,7 +1,6 @@
 import React from 'react';
 import Sidebar from '../component/Sidebar';
 import VideoList from '../component/VideoList';
-import './home.css'
 
 const Home = ({videoItems, selectVideoItem}) => {
     return (

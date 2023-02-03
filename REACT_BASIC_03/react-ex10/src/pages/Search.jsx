@@ -6,7 +6,7 @@ import {videoURL, searchURL, channelURL} from './../libs/api'
 const Search = ({videoItems, selectVideoItem}) => {
     return (
         <div className='contents-wrap'>
-            <div>
+            <div className='sidebar-box'>
                 <Sidebar />
             </div>
             <div className='video-list'>
