@@ -2,14 +2,15 @@ import React from 'react';
 import VideoItem from './VideoItem';
 import './VideoList.css' 
 
-const VideoList = ({videoItems}) => {
+const VideoList = ({videoItems, selectVideoItem}) => {
     return (
         <ul className='videoList'>
             {
-                videoItems.map(videoItem => (
+                videoItems && videoItems.map(videoItem => (
                     <VideoItem 
                         videoItem={videoItem}
-                        key={VideoItem.id}    />
+                        key={VideoItem.id} 
+                        selectVideoItem={selectVideoItem}   />
                 ))
             }
         </ul>

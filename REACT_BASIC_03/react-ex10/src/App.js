@@ -20,7 +20,7 @@ function App() {
     const response = await fetch(URL);
     const result = await response.json();
     setVideoItems(result.items)
-    console.log(result.items)
+    // console.log(result.items)
     defaultVideos = result.items
   }
 
@@ -37,23 +37,28 @@ function App() {
   //    다른 페이지에서 로고눌렀을 때 home으로 오는데, 30개 동영상 리스트는 session에서 가져올 수 있도록
   const clickLogo=() => {
     setVideoItems(defaultVideos);
-
   }
 
   const search = async (keyword) => {
     const URL = searchURL(keyword)
     const response = await fetch(URL);
     const result = await response.json();
-    const resultCng = result.items.map(item => ({ ...item, id:item.id.videoId}))
+    const resultCng= result.items.map(item=>({...item,id:item.id.videoId}))
     setVideoItems(resultCng);
-
+    
     // 다른 방법
     // if(typeof result.item.id === 'string') {
     //   id = result.item.id;
     // }else(typeof result.item.id === 'object') {
     //   id = result.item.id.videoId;
     // }
-    
+
+  }
+
+  const selectVideoItem = (video) => {
+    setSelectVideo(video)
+    selectedWatch=video;
+    console.log(video)
   }
 
   return (    // videoItems가 있어야 실행되도록
@@ -61,9 +66,9 @@ function App() {
       <BrowserRouter>
       <Header search={search} clickLogo={clickLogo} />
         <Routes>
-          <Route path="/" element={<Home videoItems={videoItems} search={search} />} />
-          <Route path="/search" element={<Search videoItems={videoItems} search={search} />} /> 
-          <Route path="/watch" element={<Watch videoItems={videoItems} search={search} />}/> 
+          <Route path="/" element={<Home videoItems={videoItems} search={search}  selectVideoItem={selectVideoItem} />} />
+          <Route path="/search" element={<Search videoItems={videoItems} search={search} selectVideoItem={selectVideoItem} />} /> 
+          <Route path="/watch" element={<Watch videoItems={videoItems} search={search} selectVideoItem={selectVideoItem} selectVideo={selectVideo} selectedWatch={selectedWatch} />}/> 
         </Routes>
       </BrowserRouter>
     </div>
