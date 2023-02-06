@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import CartItem from './CartItem';
-import './cartList.css'
+import './css/cartList.css'
 
 
 const CartList = () => {

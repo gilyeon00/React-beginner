@@ -36,7 +36,7 @@
 
 
 import React from 'react';
-import "./productList.css";
+import "./css/productList.css";
 import {useState, useEffect } from "react";
 import ProductItem from "./ProductItem"
 import counterSlice from '../store/counter/counterSlice';

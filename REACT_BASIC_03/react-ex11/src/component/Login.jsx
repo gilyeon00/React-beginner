@@ -1,5 +1,5 @@
 import React from 'react';
-import './login.css'
+import './css/login.css'
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../store/user/userSlice';
