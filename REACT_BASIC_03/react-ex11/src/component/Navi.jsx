@@ -17,7 +17,11 @@ const Navi = () => {
                 </Link>
             </span>
             <span className='user'>
-                로그인
+                {/* {
+                    const user = 
+                    user ? <span className='user'>로그아웃</span> : <span className='user'>로그인</span> 
+                } */}
+                <Link to = '/login'>로그인</Link>
             </span>
         </nav>
     );
