@@ -2,7 +2,7 @@
     margin:0 10px 30px;
     flex:0 0 220px;
     text-align: center;
-    align-items: center;
+
 }
 .item-image {
     width: 100%;
@@ -23,11 +23,16 @@
     display: flex;
     align-items: center;
     margin-top: 8px;
+    float: right;
     border: none;
     border-radius: 3px;
     background-color: rgb(39, 80, 170);
     color: #fff;
     font-weight: 600;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    justify-content: center;
 }
 .fas{
     margin-right: 1rem;
