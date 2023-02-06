@@ -1,0 +1,37 @@
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 50px;
+    padding: 0 150px;
+    background-color: palevioletred;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav-title {
+    cursor: pointer;
+}
+
+.fas{
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-amount {
+    position: absolute;
+    top: -10px;
+    right: -7px;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background-color: rgb(255, 163, 132);
+    display: flex;
+    color: #fff;
+    font-size: 2;
+    font-weight: normal;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,10 +1,14 @@
 import './App.css';
-import Counter from './component/Counter';
+// import Counter from './component/Counter';
+import Navi from './component/Navi';
+import ProductList from './component/ProductList';
 
 function App() {
   return (
     <div className="App">
-      <Counter/>
+      {/* <Counter/> */}
+      <Navi/>
+      <ProductList/>
     </div>
   );
 }
