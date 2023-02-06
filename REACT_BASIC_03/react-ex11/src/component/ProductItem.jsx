@@ -17,8 +17,8 @@ const ProductItem = ({item}) => {
             <div className='item-name'>{item.product_name}</div>
             <div className='item-price'>{item.price}</div>
             {/* 버튼 눌렀을 때 장바구니에 상품 정보를 보낼 디스패치가 필요 */}
-            <button className='add-cart-btn' onClick={()=> {dispatch(addCart(item))}}> 
-                <i className="fas fa-plus"></i> 장바구니에 담기 </button>
+            <button className='add-cart-btn' onClick={()=> dispatch(addCart(item))}> 
+                <i className="fas fa-plus"/> 장바구니에 담기 </button>
         </div>
     );
 };

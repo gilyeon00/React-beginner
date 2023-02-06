@@ -11,10 +11,7 @@ const rootReducer = combineReducers({
 
 const store = configureStore({
     reducer:rootReducer
-})
-
-export default configureStore({
-    reducer: {
-      cart:cartSlice
-    }
   })
+  
+ export default store;
+  

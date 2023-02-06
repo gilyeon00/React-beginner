@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit'
 // Slice : 툴킷 세팅을 쉽게 해주는 방법 - 리듀서와 액션크리에이터를 합쳐서 세팅하는 것
 
 const initialState = []     // 초기값 설정
-  
 
 const cartSlice = createSlice({
   name: 'cart',
@@ -16,10 +15,9 @@ const cartSlice = createSlice({
             }else{
                 state = state.push(action.payload)
             }
-
         },
         delCart: (state, action) => {
-
+            state = state.pop(action.payload)
         },
   }
 })
