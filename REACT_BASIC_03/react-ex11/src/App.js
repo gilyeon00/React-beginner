@@ -5,6 +5,7 @@ import ProductList from './component/ProductList';
 import Login from './component/Login'
 import {Routes, Route, BrowserRouter} from 'react-router-dom'
 import CartList from './component/CartList';
+import UserRedirect from './component/UserRedirect';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<ProductList/>} />
             <Route path="/cart" element={<CartList/>} />
             <Route path="/login" element={<Login/>} />  
+            <Route path="/product/:id" element={<UserRedirect/>} />  
         </Routes>
       </BrowserRouter>
     </div>
