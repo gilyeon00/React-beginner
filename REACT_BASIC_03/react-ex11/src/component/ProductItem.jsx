@@ -11,8 +11,7 @@ const ProductItem = ({item}) => {
                 <div className='item-name'>{item.product_name}</div>
                 <div className='item-price'>{item.price}</div>
                 <button className='add-cart-btn'> 
-                    <i class="fa-solid fa-plus"></i>
-                    장바구니에 담기 </button>
+                    <i class="fas fa-plus"></i> 장바구니에 담기 </button>
         </div>
     );
 };

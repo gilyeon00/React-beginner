@@ -1,6 +1,8 @@
 .product-item{
     margin:0 10px 30px;
     flex:0 0 220px;
+    text-align: center;
+    align-items: center;
 }
 .item-image {
     width: 100%;
@@ -23,7 +25,10 @@
     margin-top: 8px;
     border: none;
     border-radius: 3px;
-    background-color: rgb(122, 17, 17);
+    background-color: rgb(39, 80, 170);
     color: #fff;
     font-weight: 600;
+}
+.fas{
+    margin-right: 1rem;
 }
