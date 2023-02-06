@@ -6,14 +6,14 @@ const initialState = {
 }
 
 const userSlice = createSlice({
-  name: 'user',
-  initialState,
-  reducers: {       
+  name: 'user',     // reducer 이름
+  initialState,     // data 초기값
+  reducers: {       //  상태 변경을 어떻게 실행할 지 지정하는 것
         login : (state, action) =>{
-
+            state.value = action.payload
         },
         logout : (state, action) => {
-
+            state.value = action.payload
         }
   }
 })
