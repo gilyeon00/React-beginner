@@ -9,15 +9,19 @@ const cartSlice = createSlice({
   reducers: {       
         addCart: (state, action) => {
             // console.log(action.payload)
+            // findindex : 반환 타입 number, 없다면 -1
             const equalItem = state.findIndex(item => item.id === action.payload.id);
             if(equalItem >= 0){
                 alert("장바구니에 동일한 상품이 있습니다.")
-            }else{
+            }else if (equalItem < 0) {
                 state = state.push(action.payload)
             }
         },
         delCart: (state, action) => {
-            state = state.pop(action.payload)
+            // payload로 가져온 인덱스를 기존의 cartlist에 있는 인덱스에서 filter 후 없애줌
+            // console.log(action.payload)
+            const num = state.findIndex((ele) => ele.id === action.payload[0].id)
+            state = state.splice(num, 1);
         },
   }
 })

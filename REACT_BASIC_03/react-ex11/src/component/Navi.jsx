@@ -11,9 +11,9 @@ const Navi = () => {
             <h1><Link to = '/'>SHOP</Link></h1>
             <span>
                 <Link to = '/cart'>
-                <i className="fas fa-shopping-cart">
-                <div className='cart-amount'>{cart.length}</div>
-                </i>
+                    <i className="fas fa-shopping-cart">
+                    <div className='cart-amount'>{cart.length}</div>
+                    </i>
                 </Link>
             </span>
             <span className='user'>
