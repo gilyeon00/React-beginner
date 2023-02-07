@@ -7,8 +7,10 @@ function App() {
       <form>
         <h1>글 목록</h1>
         <div>
-          {/* <ListItem/> */}
+          <ListItem/>
         </div>
+        <input type="text" value=""/>
+        <button type="submit">목록 추가</button>
       </form>
     </div>
   );
