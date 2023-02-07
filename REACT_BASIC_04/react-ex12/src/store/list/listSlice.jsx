@@ -9,7 +9,7 @@ export const getList = createAsyncThunk(
     "GET_LIST",     // type
     async() => {
         try{
-            const res = await axios.get("https://my-json-server.typicode.com/gilyeon00/React-study/list");
+            const res = await axios.get("https://my-json-server.typicode.com/gilyeon00/React-study/react-ex12/list");
             return res.data;
         }catch(err){
             console.error(err)
@@ -21,7 +21,7 @@ export const addList = createAsyncThunk(
     "ADD_LIST",
     async(newList)=>{
         try{
-            const res = await axios.post("https://my-json-server.typicode.com/gilyeon00/React-study/list",newList);
+            const res = await axios.post("https://my-json-server.typicode.com/gilyeon00/React-study/react-ex12/list",newList);
             return res.data;
         }catch(err){
             console.error(err)
@@ -33,7 +33,7 @@ export const deleteList = createAsyncThunk(
     "DELETE_LIST",
     async(id) => {
         try{
-            const res = await axios.delete(`https://my-json-server.typicode.com/gilyeon00/React-study/list/${id}`);
+            const res = await axios.delete(`https://my-json-server.typicode.com/gilyeon00/React-study/react-ex12/list/${id}`);
             return id;
         }catch(err) {
             console.error(err)
@@ -45,7 +45,7 @@ export const updateList = createAsyncThunk(
     "UPDATE_LIST",
     async({id, content}) => {
         try{
-            const res = await axios.put(`https://my-json-server.typicode.com/gilyeon00/React-study/list/${id}`,{content:content});
+            const res = await axios.put(`https://my-json-server.typicode.com/gilyeon00/React-study/react-ex12/list/${id}`,{content:content});
             return {id, content}
         }catch(err) {
             console.error(err)
