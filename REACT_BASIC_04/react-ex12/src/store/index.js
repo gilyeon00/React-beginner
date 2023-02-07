@@ -1,14 +1,14 @@
-import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import { listSlice } from './list/ListSlice'
-
+import { configureStore,combineReducers } from '@reduxjs/toolkit';
+import listSlice from "./list/listSlice";
 
 const reducer = combineReducers({
     list:listSlice,
-});
+  });
+  
 
-const store = configureStore({
-    reducer, 
-    middleware:(getDefaultMiddleware) => getDefaultMiddleware()        // Thunk는 default middleware
-})
+  const store = configureStore({
+    reducer,
+    middleware: (getDefaultMiddleware) =>  getDefaultMiddleware()
+  })
 
-export default store;
+  export default store;
