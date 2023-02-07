@@ -40,17 +40,27 @@ import "./css/productList.css";
 import {useState, useEffect } from "react";
 import ProductItem from "./ProductItem"
 import counterSlice from '../store/counter/counterSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProduct } from '../store/product/productSlice';
+
 
 const ProductList= () => {
-    const [products, setProducts] = useState([]);
-    const getProductData = async() => {
-        const res = await fetch("/data/productList.json");
-        const result = await res.json();
-        setProducts(result.productList)
-    }
+    const dispatch = useDispatch();
+    const products = useSelector((state) => state.products.value);
+
     useEffect(()=>{
-        getProductData();
+        dispatch(getProduct());
     },[])
+    // const [products, setProducts] = useState([]);
+
+    // const getProductData = async() => {
+    //     const res = await fetch("/data/productList.json");
+    //     const result = await res.json();
+    //     setProducts(result.productList)
+    // }
+    // useEffect(()=>{
+    //     dispatch(getProductData());
+    // },[])
     return (
         <div className="product-list">
              <h2 className="product-list-title">상품 목록</h2>

@@ -12,6 +12,9 @@ import storage from 'reduxjs-toolkit-persist/lib/storage'       // 로컬 스토
 
 import {  getDefaultMiddleware } from '@reduxjs/toolkit';
 
+
+import productSlice from './product/productSlice'
+
 const persistConfig = {
     key : 'root',
     storage
@@ -20,7 +23,8 @@ const persistConfig = {
 // 여러 reducer을 사용할 때 
 const rootReducer = combineReducers({
     cart:cartSlice,
-    user:userSlice
+    user:userSlice,
+    product:productSlice
 })
 
 // rootreducer와 persist를 묶어서 사용한다.
