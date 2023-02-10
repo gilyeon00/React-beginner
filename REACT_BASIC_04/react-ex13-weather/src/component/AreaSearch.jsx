@@ -14,7 +14,7 @@ const AreaSearch = ({setAreaInfo}) => {
     const searchAddress = async(address) => {
         try{
             const response = await Geocode.fromAddress(address);
-            console.log(response)
+            // console.log(response.results[0])
             if(response.results.length){
                 // response.result의 길이가 존재할 때 -> 잘 받아왔을때
                     const {lat, lng} = response.results[0].geometry.location;
@@ -24,13 +24,16 @@ const AreaSearch = ({setAreaInfo}) => {
             console.error(err)
         }
     }
-
+    
     const onChangeInput = (e) => {
         setInputValue(e.target.value)
     }
 
     const onSubmit = (e) => {
         e.preventDefault();
+        if(setAreaInfo !== undefined){
+            setAreaInfo(undefined)
+        }
         searchAddress(inputValue)
         setInputValue('');
     }
