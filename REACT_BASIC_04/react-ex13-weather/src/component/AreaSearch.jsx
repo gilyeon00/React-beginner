@@ -5,8 +5,10 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 const AreaSearch = ({setAreaInfo}) => {
+    const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_MAP_API;
+
     useEffect( ()=>  {
-        Geocode.setApiKey("AIzaSyDtFLP1-RYl97Is_NBhxrm17c5TnFQ33Bk")
+        Geocode.setApiKey(GOOGLE_API_KEY)
     },[])
 
     const [inputValue, setInputValue] = useState('');
@@ -24,7 +26,7 @@ const AreaSearch = ({setAreaInfo}) => {
             console.error(err)
         }
     }
-    
+
     const onChangeInput = (e) => {
         setInputValue(e.target.value)
     }
