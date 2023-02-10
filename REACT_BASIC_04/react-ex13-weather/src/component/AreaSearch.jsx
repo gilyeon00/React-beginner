@@ -17,7 +17,7 @@ const AreaSearch = ({setAreaInfo}) => {
             if(response.result.length){
                 // response.result의 길이가 존재할 때 -> 잘 받아왔을때
                     const {lat, lng} = response.result[0].geometry.location;
-                    setAreaInfo({lat:lat, lon:lng})
+                    setAreaInfo({lat:String(lat), lon:String(lng)})
             }
         }catch(err){
             console.error(err)
@@ -30,8 +30,8 @@ const AreaSearch = ({setAreaInfo}) => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-
-        searchAddress([inputValue])
+        searchAddress(inputValue)
+        setInputValue('');
     }
 
     return (
