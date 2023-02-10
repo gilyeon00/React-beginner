@@ -7,8 +7,8 @@ import AreaSearch from './component/AreaSearch';
 
 function App() {
   const[areaInfo, setAreaInfo] = useState({
-    lat:'',
-    lon:''
+    lat:'37.566',
+    lon:'126.977'
   })
 
   return (
@@ -19,7 +19,6 @@ function App() {
         forecast="5days"
         apikey="315f0ba934c7194edfa87f918ad29774"
         type="geo"
-        city="Seoul"
         lat = {areaInfo.lat}
         lon = {areaInfo.lon}
         />

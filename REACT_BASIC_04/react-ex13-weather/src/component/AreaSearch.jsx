@@ -14,9 +14,10 @@ const AreaSearch = ({setAreaInfo}) => {
     const searchAddress = async(address) => {
         try{
             const response = await Geocode.fromAddress(address);
-            if(response.result.length){
+            console.log(response)
+            if(response.results.length){
                 // response.result의 길이가 존재할 때 -> 잘 받아왔을때
-                    const {lat, lng} = response.result[0].geometry.location;
+                    const {lat, lng} = response.results[0].geometry.location;
                     setAreaInfo({lat:String(lat), lon:String(lng)})
             }
         }catch(err){
@@ -41,6 +42,7 @@ const AreaSearch = ({setAreaInfo}) => {
                 <input
                     type="text"
                     autoFocus
+                    value={inputValue}
                     onChange={onChangeInput}
                     ></input>
                 <button>검색</button>
